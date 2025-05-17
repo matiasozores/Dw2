@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5 - Matías Ozores</title>
+</head>
+<body>
+    <script>
+        let productos = ["Zapatillas", "Remera", "Pantalon", "Gorra", "Campera"];
+        console.log("-.-.- Prodcutos disponibles -.-.-")
+        for (let i = 0; i < productos.length; i++) {
+            console.log(productos[i]);
+        }
+
+        for (let i = 0; i < 2; i++) {
+            productos.pop(); 
+        }
+
+        console.log("-.-.- Productos despues de vender -.-.-");
+        for (let i = 0; i < productos.length; i++) {
+            console.log(productos[i]);
+        }
+    </script>
+</body>
+</html>
