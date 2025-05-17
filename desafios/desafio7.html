@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 7 - Matías Ozores</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+  <h1 id="nombreProducto">Zapatillas</h1>
+  <p id="precioProducto">$500</p>
+
+  <script>
+    const precio = document.getElementById("precioProducto");
+    precio.innerText = "$450";
+    
+    const titulo = document.querySelector("#nombreProducto");
+    titulo.style.color = "blue";
+    titulo.style.fontWeight = "bold";
+  </script>
+</body>
+</html>
