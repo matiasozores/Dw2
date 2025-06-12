@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto Final</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <nav class="navegacion">
+      <div class="logo">
+        <h1>Proyecto Final</h1>
+      </div>
+      <div class="menu">
+        <a href="#" class="activo">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Categorías</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Contacto</a>
+      </div>
+      <div class="acciones">
+        <button id="botonCarrito"><i class="fas fa-shopping-cart"></i> Carrito (<span id="contadorCarrito">0</span>)</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="productos">
+      <h2>Productos Destacados</h2>
+      <div id="listaProductos" class="grid-productos">
+        <div class="producto">
+          <div class="producto-imagen">
+            <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&auto=format&fit=crop&q=60" alt="Laptop Gaming">
+          </div>
+          <div class="producto-info">
+            <h3>Laptop Gaming Pro</h3>
+            <p class="producto-descripcion">Laptop gaming de alto rendimiento con RTX 4070, 32GB RAM, 1TB SSD</p>
+            <div class="producto-precio">
+              <span class="precio-actual">$1,499</span>
+              <span class="precio-anterior">$1,699</span>
+            </div>
+            <div class="producto-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(4.5)</span>
+            </div>
+            <button class="boton-agregar" onclick="agregarAlCarrito(this, 'Laptop Gaming Pro', 1499)">
+              <i class="fas fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="producto">
+          <div class="producto-imagen">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&auto=format&fit=crop&q=60" alt="Smartphone">
+          </div>
+          <div class="producto-info">
+            <h3>Smartphone Ultra</h3>
+            <p class="producto-descripcion">Smartphone de última generación con cámara de 108MP y pantalla AMOLED</p>
+            <div class="producto-precio">
+              <span class="precio-actual">$899</span>
+              <span class="precio-anterior">$999</span>
+            </div>
+            <div class="producto-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>(4.0)</span>
+            </div>
+            <button class="boton-agregar" onclick="agregarAlCarrito(this, 'Smartphone Ultra', 899)">
+              <i class="fas fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="producto">
+          <div class="producto-imagen">
+            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500&auto=format&fit=crop&q=60" alt="Smartwatch">
+          </div>
+          <div class="producto-info">
+            <h3>Smartwatch Elite</h3>
+            <p class="producto-descripcion">Smartwatch con monitor cardíaco, GPS y resistencia al agua</p>
+            <div class="producto-precio">
+              <span class="precio-actual">$299</span>
+            </div>
+            <div class="producto-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <button class="boton-agregar" onclick="agregarAlCarrito(this, 'Smartwatch Elite', 299)">
+              <i class="fas fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <div class="producto">
+          <div class="producto-imagen">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60" alt="Auriculares">
+          </div>
+          <div class="producto-info">
+            <h3>Auriculares Pro</h3>
+            <p class="producto-descripcion">Auriculares inalámbricos con cancelación de ruido y sonido premium</p>
+            <div class="producto-precio">
+              <span class="precio-actual">$249</span>
+              <span class="precio-anterior">$299</span>
+            </div>
+            <div class="producto-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(4.7)</span>
+            </div>
+            <button class="boton-agregar" onclick="agregarAlCarrito(this, 'Auriculares Pro', 249)">
+              <i class="fas fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-contenido">
+      <div class="footer-seccion">
+        <h3>Proyecto Final</h3>
+        <p>E-commerce desarrollado como proyecto final para el curso de Desarrollo Web.</p>
+      </div>
+      <div class="footer-seccion">
+        <h3>Desarrollado por</h3>
+        <p class="desarrollador">Matías Ozores</p>
+        <div class="redes-sociales">
+          <a href="https://github.com/MatiasOzores" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mat%C3%ADas-ozores-57795030a/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-seccion">
+        <h3>Contacto</h3>
+        <ul>
+          <li><i class="fas fa-envelope"></i> matias.alejandro.ozores@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-inferior">
+      <p>&copy; 2025 Proyecto Final - Desarrollo Web 2 | Matías Ozores</p>
+    </div>
+  </footer>
+
+  <div id="modalCarrito" class="modal">
+    <div class="contenido-modal">
+      <div class="modal-header">
+        <h2><i class="fas fa-shopping-cart"></i> Tu Carrito</h2>
+        <span class="cerrar">&times;</span>
+      </div>
+      <div id="itemsCarrito" class="modal-body"></div>
+      <div class="modal-footer">
+        <div class="resumen-carrito">
+          <p>Subtotal: <span id="subtotalCarrito">$0.00</span></p>
+          <p>Envío: <span id="envioCarrito">$0.00</span></p>
+          <p class="total">Total: <span id="totalCarrito">$0.00</span></p>
+        </div>
+        <button class="boton-comprar">Proceder al Pago</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
