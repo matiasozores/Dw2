@@ -10,38 +10,30 @@ const totalCarrito = document.getElementById('totalCarrito');
 const subtotalCarrito = document.getElementById('subtotalCarrito');
 const envioCarrito = document.getElementById('envioCarrito');
 
-// Función para abrir el modal
 function abrirModal() {
   actualizarCarrito();
   modalCarrito.style.display = 'block';
-  document.body.style.overflow = 'hidden'; // Previene el scroll del body
+  document.body.style.overflow = 'hidden';
 }
 
-// Función para cerrar el modal
 function cerrarModal() {
   modalCarrito.style.display = 'none';
-  document.body.style.overflow = ''; // Restaura el scroll del body
+  document.body.style.overflow = '';
 }
 
-// Inicialización de eventos del modal
 function inicializarModal() {
-  // Botón de carrito
   botonCarrito.addEventListener('click', abrirModal);
-
-  // Botón de cerrar (X)
   const botonCerrar = document.querySelector('.modal-header .cerrar');
   if (botonCerrar) {
     botonCerrar.onclick = cerrarModal;
   }
 
-  // Cerrar al hacer clic fuera del modal
   modalCarrito.onclick = function(evento) {
     if (evento.target === modalCarrito) {
       cerrarModal();
     }
   };
 
-  // Cerrar con la tecla Escape
   document.onkeydown = function(evento) {
     if (evento.key === 'Escape' && modalCarrito.style.display === 'block') {
       cerrarModal();
@@ -49,7 +41,6 @@ function inicializarModal() {
   };
 }
 
-// Inicializar el modal cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', inicializarModal);
 
 botonBuscar.addEventListener('click', () => {

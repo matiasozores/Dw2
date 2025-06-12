@@ -1,13 +1,13 @@
 :root {
-  --color-primario: #2c5282; /* Azul suave oscuro */
-  --color-secundario: #4299e1; /* Azul medio suave */
-  --color-fondo: #f7fafc; /* Gris muy claro con tinte azulado */
-  --color-texto: #2d3748; /* Gris oscuro para texto */
+  --color-primario: #2c5282; 
+  --color-secundario: #4299e1; 
+  --color-fondo: #f7fafc; 
+  --color-texto: #2d3748;
   --color-blanco: #fff;
-  --color-accent: #63b3ed; /* Azul claro suave */
-  --color-success: #48bb78; /* Verde suave */
-  --color-warning: #ecc94b; /* Amarillo suave */
-  --color-danger: #f56565; /* Rojo suave */
+  --color-accent: #63b3ed;
+  --color-success: #48bb78;
+  --color-warning: #ecc94b; 
+  --color-danger: #f56565; 
   --sombra: 0 2px 5px rgba(0,0,0,0.05);
   --transicion: all 0.3s ease;
 }
@@ -25,7 +25,7 @@ body {
   background-color: var(--color-fondo);
 }
 
-/* Header y Navegación */
+
 header {
   background-color: var(--color-primario);
   color: var(--color-blanco);
@@ -85,7 +85,6 @@ header {
   color: var(--color-secundario);
 }
 
-/* Banner */
 .banner {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x400');
   background-size: cover;
@@ -101,12 +100,11 @@ header {
   margin-bottom: 1rem;
 }
 
-/* Productos */
 .productos {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  min-height: calc(100vh - 200px); /* Ajusta esto según la altura de tu header */
+  min-height: calc(100vh - 200px); 
 }
 
 .productos h2 {
@@ -219,7 +217,7 @@ header {
   transform: translateY(-2px);
 }
 
-/* Footer */
+
 footer {
   background-color: var(--color-primario);
   color: var(--color-blanco);
@@ -303,7 +301,6 @@ footer {
   color: rgba(255,255,255,0.6);
 }
 
-/* Modal del Carrito */
 .modal {
   display: none;
   position: fixed;
@@ -481,7 +478,6 @@ footer {
   pointer-events: none;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .navegacion {
     flex-direction: column;
